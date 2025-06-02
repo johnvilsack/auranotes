@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AuraNotes Privacy Policy</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
+        h1, h2 { color: #333; }
+        strong { color: #555; }
+    </style>
+</head>
+<body>
+    <h1>AuraNotes Privacy Policy</h1>
+    <p><em>Last Updated: June 1, 2025</em></p>
+
+    <p>AuraNotes ("the Extension") is committed to protecting your privacy. This policy outlines how your data is handled when you use AuraNotes.</p>
+
+    <h2>What User Data Does AuraNotes Handle?</h2>
+    <p>AuraNotes handles the following types of information:</p>
+    <ul>
+        <li>
+            <strong>Google Account Information:</strong> When you connect AuraNotes to Google Drive, the Extension uses Google's OAuth 2.0 authentication. This process may involve access to your Google Account's email address and basic profile information, solely for the purpose of authenticating you with Google Drive and enabling the Extension to connect to <em>your own</em> Drive account for storing and syncing notes. AuraNotes does not store your email address or profile information itself; it only uses the secure authentication token provided by Google.
+        </li>
+        <li>
+            <strong>Note Data (User-Created Content):</strong> This includes the content of your notes (title, text), their position on the page (x, y coordinates), size (width, height), display state (e.g., minimized), the webpage scope you associate them with (exact URL, URL without parameters, or domain), and timestamps. This data is created and managed by you.
+        </li>
+        <li>
+            <strong>Webpage URLs:</strong> The URLs of the webpages you visit where you interact with AuraNotes (i.e., create or view notes). This is used to associate your notes with specific web contexts so they appear when you revisit those pages. The Extension does not build a general browsing history for other purposes.
+        </li>
+        <li>
+            <strong>Extension Settings & Sync Status:</strong> Your chosen Google Drive storage preference (hidden app folder or visible folder), the ID of your AuraNotes data file on Drive, and the timestamp of the last successful sync. This is used to manage the synchronization process and remember your preferences.
+        </li>
+    </ul>
+
+    <h2>How AuraNotes Uses and Protects Your Data</h2>
+    <ul>
+        <li>
+            <strong>Storage:</strong>
+            <ul>
+                <li><strong>Locally:</strong> Your notes and some settings are stored in your browser's local IndexedDB and <code>chrome.storage.local</code>. This allows for faster loading of notes and provides offline access to notes you've already synced or created. This data remains on your computer.</li>
+                <li><strong>Google Drive:</strong> Your notes (as an <code>auranotes_data.json</code> file) are synced to <em>your own</em> Google Drive account. You have full control over this file within your Drive. AuraNotes uses Google's secure APIs (HTTPS) to interact with your Drive.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Data Transmission:</strong> Your note data is transmitted securely (using HTTPS) between your browser and your Google Drive account during synchronization. AuraNotes does <strong>not</strong> send your note data, URLs, or Google account information to any third-party servers, other than Google's own services (Drive API, Authentication services) as required for its core functionality.
+        </li>
+        <li>
+            <strong>Privacy by Design:</strong>
+            <ul>
+                <li>The permission to access website data (<code>scripting</code> on all URLs) is strictly for the purpose of displaying and managing your notes on those pages. AuraNotes is designed not to interfere with or collect data from other parts of the webpage.</li>
+                <li>You choose where your notes file is stored in your Google Drive (a hidden app-specific folder or a visible folder).</li>
+            </ul>
+        </li>
+        <li>
+            <strong>No Sale of Data:</strong> AuraNotes does <strong>not</strong> sell or share your personal data with third parties for marketing or any other purposes.
+        </li>
+        <li>
+            <strong>Open Source (Optional):</strong> <em>(If you make it open source, add this line)</em> The source code for AuraNotes is available for review at http://www.github.com/johnvilsack/auranotes, promoting transparency.
+        </li>
+    </ul>
+
+    <h2>Permissions Explained</h2>
+    <p>AuraNotes requests certain permissions to function. Here's why:</p>
+    <ul>
+        <li><strong>identity:</strong> To authenticate you with Google Drive.</li>
+        <li><strong>storage:</strong> To save settings and local note cache.</li>
+        <li><strong>scripting (on all sites):</strong> To display notes on webpages.</li>
+        <li><strong>tabs:</strong> To get the current page URL for note context.</li>
+        <li><strong>alarms:</strong> To schedule background sync.</li>
+        <li><strong>notifications:</strong> To provide sync status updates (primarily in-popup).</li>
+        <li><strong>Access to googleapis.com:</strong> To communicate with Google Drive.</li>
+        <li><strong>Google Drive Scopes (<code>drive</code> and <code>drive.appdata</code>):</strong> To create, read, and update the AuraNotes data file and manage the 'AuraNotes' folder (if chosen) in your own Google Drive. AuraNotes only interacts with its own dedicated file/folder.</li>
+    </ul>
+
+    <h2>Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
+
+    <h2>Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy, please contact us at: https://github.com/johnvilsack/auranotes/issues</p>
+</body>
+</html>
