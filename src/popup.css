@@ -1,0 +1,153 @@
+/* Original body styles & base */
+body {
+    width: 300px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    box-sizing: border-box;
+    margin: 0; /* Ensure no default body margin interferes */
+}
+
+*, *::before, *::after {
+    box-sizing: inherit; /* Inherit box-sizing from body */
+}
+
+/* Replicating Tailwind classes used in popup.html */
+.p-4 { padding: 1rem; }
+.p-3 { padding: 0.75rem; }
+.bg-gray-100 { background-color: #f3f4f6; } /* Tailwind's gray-100 */
+.bg-yellow-100 { background-color: #fef3c7; } /* Tailwind's yellow-100 */
+.border { border-width: 1px; }
+.border-yellow-300 { border-color: #fcd34d; } /* Tailwind's yellow-300 */
+
+
+.container { width: 100%; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+.mb-4 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 0.75rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mt-1 { margin-top: 0.25rem; }
+.mt-3 { margin-top: 0.75rem; }
+.my-4 { margin-top: 1rem; margin-bottom: 1rem; }
+
+.text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+.font-bold { font-weight: 700; }
+.font-semibold { font-weight: 600; }
+.font-medium { font-weight: 500; }
+.text-center { text-align: center; }
+.text-gray-700 { color: #374151; } 
+.text-gray-600 { color: #4b5563; } 
+.text-gray-500 { color: #6b7280; } 
+.text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+.text-xs { font-size: 0.75rem; line-height: 1rem; }
+.text-yellow-800 { color: #92400e; } /* Tailwind's yellow-800 */
+.text-yellow-700 { color: #b45309; } /* Tailwind's yellow-700 */
+.text-blue-600 { color: #2563eb; } /* Tailwind's blue-600 */
+.hover\:text-blue-800:hover { color: #1e40af; } /* Tailwind's blue-800 */
+.underline { text-decoration-line: underline; }
+.cursor-pointer { cursor: pointer; }
+
+
+.w-full { width: 100%; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.text-white { color: #ffffff; }
+.rounded { border-radius: 0.375rem; } 
+
+.bg-blue-500 { background-color: #3b82f6; }
+.hover\:bg-blue-600:hover { background-color: #2563eb; }
+
+.bg-green-500 { background-color: #10b981; }
+.hover\:bg-green-600:hover { background-color: #059669; }
+
+.bg-orange-500 { background-color: #f97316; } 
+.hover\:bg-orange-600:hover { background-color: #ea580c; } 
+
+.bg-indigo-500 { background-color: #6366f1; } /* Tailwind's indigo-500 */
+.hover\:bg-indigo-600:hover { background-color: #4f46e5; } /* Tailwind's indigo-600 */
+.bg-purple-500 { background-color: #a855f7; } /* Tailwind's purple-500 */
+.hover\:bg-purple-600:hover { background-color: #9333ea; } /* Tailwind's purple-600 */
+.bg-red-500 { background-color: #ef4444; }
+.hover\:bg-red-600:hover { background-color: #dc2626; }
+.bg-gray-200 { background-color: #e5e7eb; }
+.hover\:bg-gray-300:hover { background-color: #d1d5db; }
+
+
+.transition { transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter, backdrop-filter; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+.duration-150 { transition-duration: 150ms; } 
+.ease-in-out { transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); } 
+.opacity-80 { opacity: 0.8; }
+.block { display: block; }
+
+
+/* For the <hr> element */
+hr {
+    border: 0;
+    border-top-width: 1px;
+    border-color: #e5e7eb; /* Tailwind's gray-200 for consistency */
+    height: 1px; /* Ensure it's not 0 height */
+}
+
+/* Basic button styling */
+button {
+    display: block; 
+    cursor: pointer;
+    border-width: 0; /* Assuming buttons shouldn't have default borders */
+    text-decoration: none; /* Remove underline from button text if any */
+}
+
+button:focus {
+    outline: 2px solid transparent; 
+    outline-offset: 2px;
+}
+
+/* Spinner styles */
+.spinner {
+  border: 3px solid rgba(75, 85, 99, 0.2); 
+  border-left-color: #4b5563; 
+  border-radius: 50%;
+  width: 1em; 
+  height: 1em; 
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Basic Flex Utilities */
+.flex { display: flex; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-around { justify-content: space-around; }
+.mr-2 { margin-right: 0.5rem; } 
+
+/* Styling for the storage preference section specifically */
+#storagePreferenceSection button span {
+    font-weight: normal; /* Ensure sub-text is normal weight */
+}
+
+#storagePreferenceBackButton {
+    /* Add any specific styles if defaults aren't enough */
+    /* Example: border: 1px solid #ccc; */
+}
+
+#useLocalOnlyLink {
+    /* Styles already applied via Tailwind-like classes */
+}
+
+/* Popup Modal styles */
+#popupModalHost {
+    /* display: none; handled by JS */
+    /* position: fixed; ... already inline */
+    /* ... other fixed styles are fine inline for the host */
+}
+#popupModalContent {
+    /* Styles are inline for brevity, could be moved here */
+}
+#popupModalActions button {
+    /* Shared styles are fine, specific confirm/cancel bg handled by JS if needed or more classes */
+}

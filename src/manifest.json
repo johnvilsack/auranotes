@@ -1,0 +1,61 @@
+
+{
+  "manifest_version": 3,
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2IHHI1FQJ6qa4Rs5UI1vYxT4u/RXLb9XKoAlBExF0M+x4NpxldHhlgOE/dA39P3kC6ZyhePmZFH0RzlA7y6UfmCOyeKR6v12a4LXW16YJo1mR2yFkwPoS9BAoePsFkE004FvGRyXlpsybRRss5g8Ok8EyH140NsyfqIm0i05v6MdE5/9okf1aCyBqlNL8UJBHnMjUzKe5R9hf7hZ15P72axDgLNRm5sQxGEXSBVSc6ppyzugsw/CFkbyVOuNO+k/ohS5yiwaOpOeRjCDbDhioMYnUyrk8J0EcYypINZXOiNMja1mLCMCDF7hE+lxPblWFovICMAcy4QSGMYZKreGyQIDAQAB",
+  "name": "AuraNotes",
+  "version": "1.0",
+  "description": "Create contextual sticky notes on webpages and sync them seamlessly with Google Drive.",
+  "permissions": [
+    "identity",
+    "storage",
+    "alarms",
+    "scripting",
+    "notifications",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "https://www.googleapis.com/"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "oauth2": {
+    "client_id": "955179744005-3vjgjal7fi127qhho0glls3vhrn44fg4.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/drive",
+      "https://www.googleapis.com/auth/drive.appdata"
+    ]
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/*.png"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  }
+}

@@ -1,0 +1,7 @@
+
+{
+  "name": "AuraNotes",
+  "description": "AuraNotes: Contextual notes on webpages, seamlessly synced to Google Drive. Requires user setup of Google Cloud OAuth credentials.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
