@@ -22,3 +22,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+_extras/certs/AuraNotes.crx
+_extras/certs/AuraNotes.pem

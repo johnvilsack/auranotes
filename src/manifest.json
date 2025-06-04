@@ -9,8 +9,6 @@
     "identity",
     "storage",
     "alarms",
-    "scripting",
-    "notifications",
     "tabs"
   ],
   "host_permissions": [
